@@ -1,0 +1,2 @@
+# put Twitter data to MongoDB
+twarc2 search --archive  "biden" | twarc2 flatten | mongoimport --db tweets --collection biden
