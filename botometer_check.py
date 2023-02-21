@@ -2,15 +2,6 @@ from botometer import Botometer
 import pandas as pd
 from tqdm import tqdm
 
-from multiprocessing.dummy import Pool as ThreadPool
-
-from threading import Lock
-from functools import partial
-
-import multiprocessing as mp
-import os
-
-
 
    
 def concatdf(path,files):
