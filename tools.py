@@ -52,3 +52,14 @@ def domain4(_url):
         return  _ext.registered_domain
     else: 
         return None
+
+ 
+def concatdf(path,files):
+    DF=pd.DataFrame()
+    for i in range(len(files)):
+        each = files[i]
+        df=pd.read_csv(path+each)
+        print(df.shape)
+        DF=pd.concat([DF,df])
+        
+    return DF

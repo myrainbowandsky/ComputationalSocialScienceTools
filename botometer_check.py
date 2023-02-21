@@ -3,17 +3,6 @@ import pandas as pd
 from tqdm import tqdm
 
 
-   
-def concatdf(path,files):
-    DF=pd.DataFrame()
-    for i in range(len(files)):
-        each = files[i]
-        df=pd.read_csv(path+each)
-        print(df.shape)
-        DF=pd.concat([DF,df])
-        
-    return DF
-
 
 if __name__=='__main__':
 
