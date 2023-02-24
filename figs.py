@@ -11,5 +11,7 @@ ax.tick_params(axis='both', which='major', labelsize=15)
 #ax.set_xlabel('CAP', labelpad=40)
 ax.set_xlabel('CAP', fontsize = 22)
 ax.set_ylabel('indegree', fontsize = 20)
-plt.savefig('../Project7/figs/indegree_cap.jpg',bbox_inches='tight')
+
 plt.axvline(x=.7,color='red',linestyle ='--') 
+
+plt.savefig('../Project7/figs/indegree_cap.jpg',bbox_inches='tight')
