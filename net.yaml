@@ -1,0 +1,12 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:       
+      enp7s0:
+                gateway4: 21a.4b.11c.d
+                addresses: [21a.4b.11c.3d/24]
+                dhcp4: no
+                optional: true
+                nameservers:
+                    addresses: [8.8.8.8,8.8.4.4]
+                    search: []

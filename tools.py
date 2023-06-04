@@ -63,3 +63,6 @@ def concatdf(path,files):
         DF=pd.concat([DF,df])
         
     return DF
+
+## concat 'text by username
+df.groupby(by='name').agg(text=("text", lambda x: ",".join(set(x))))
