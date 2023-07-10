@@ -1,0 +1,4 @@
+执行
+
+chomod +x bash.sh
+Nohup ./bash.sh &
