@@ -66,3 +66,10 @@ def concatdf(path,files):
 
 ## concat 'text by username
 df.groupby(by='name').agg(text=("text", lambda x: ",".join(set(x))))
+
+
+
+df1['day'] = np.where(df1['name'].isin(df2['name']), df1['name'].map(df2.set_index('name')['day']),df1['day'])
+
+
+
