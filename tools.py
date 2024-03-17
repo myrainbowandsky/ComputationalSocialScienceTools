@@ -71,5 +71,12 @@ df.groupby(by='name').agg(text=("text", lambda x: ",".join(set(x))))
 
 df1['day'] = np.where(df1['name'].isin(df2['name']), df1['name'].map(df2.set_index('name')['day']),df1['day'])
 
-
+def batch_file(array,n_workers):
+  file_len = len(array)
+  batch_size = round(file_len / n_workers)
+  batches = [
+  array[ix:ix+batch_size]
+  for ix in tqdm(range(0, file_len, batch_size))
+  ]
+  return batches
 
